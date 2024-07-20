@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Define root variables */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+
+/* Body styles */
+body {
+  background: #f1f1f1;
+  margin: 0;
+  font-family: "Poetsen One", sans-serif;
+  font-style: normal;
+  color: #333;
+}
+
+/* Header styles */
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 0;
+}
+
+header .container {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Page container styles */
+.pages {
+  max-width: 90%;
+  margin: 20px auto;
+}
+
+/* Home page styles */
+.home {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Workout details styles */
+.workout-details {
+  position: relative; /* Add position relative to .workout-details */
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 10px;
+}
+
+/* Position the delete button */
+.workout-details .delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background: var(--error);
+  padding: 6px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.workout-details:hover {
+  transform: translateY(-5px);
+}
+
+.workout-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.workout-details p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.workout-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: var(--error);
+  padding: 6px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+/* Input styles */
+input, button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: "Poetsen One", sans-serif;
+  font-size: 1rem;
+}
+
+button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0f8740;
+}
+
+/* Error styles */
+.error {
+  color: var(--error);
+  margin-top: 5px;
+}
+
+/* Navbar styles */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 20px;
+  color: #333;
+}
+
+nav button {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .home {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .workout-details {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header a {
+    margin-top: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a, nav button {
+    margin: 10px;
+    margin-left: 0px;
+  }
+ 
+}
+.notifications {
+  position: fixed;
+  top: 50px;
+  right: 200px;
+  width: 250px;
+  max-height: 400px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.notification {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.notification p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.notification small {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #888;
+}
